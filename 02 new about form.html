@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<fieldset>
+    <legend>这是标题</legend>
+    <form action="https://www.baidu.com">
+        用户名：<input type="text" name="username">
+        <br>
+        密码：<input type="password" name="pwd">
+        <br>
+        <button>提交哦</button>
+        <br>
+        拾色器<input type="color" id="color" name="color">
+        <br>
+        数字<input type="number" id="number" name="number">
+        <br>
+        电话号码<input type="tel" id="tel" name="tel">
+        <br>
+        范围<input type="range" name="range" id="range">
+        <!--拾色器-->
+    </form>
+    <!--实际大家用ajax-->
+
+
+</fieldset>
+</body>
+<script>
+    var form = document.getElementById('form')
+    var btn = document.getElementById('btn')
+    var email = document.getElementById('email')
+
+    // email.onclick = function () {
+    email.onblur = function () {
+        // d数字
+        var reg = /^[A-Za-z\d]+([-_.][A-Za\d-z]+)*@([A-Za-z\d+[_.])+[A-Za-z\d]{2,4}$/
+    }
+    if (reg.test(email.value)){
+        alert('验证通过')
+    } else{
+        alert('验证失败')
+    }
+
+</script>
+</html>

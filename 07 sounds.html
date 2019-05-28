@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<audio src="sounds.mp3" >
+你的浏览器不支持音乐播放功能，请更换浏览器
+</audio>
+<!--兼容处理-->
+<!--<sudio conrols loop preload>-->
+    <!--<source src="sounds.mp3">-->
+    <!--&lt;!&ndash;<source src="sounds.ogg">&ndash;&gt;-->
+<!--</sudio>-->
+
+<div id="box">
+    <img src="beauty.jpg" alt="">
+    <audio >
+        <source src="sounds.mp3" type="audio/mp3">
+    </audio>
+    <button id="btn">播放</button>
+</div>
+
+</body>
+<script>
+    var box = document.getElementById('box');
+    var btn = box.getElementById('btn')
+
+    btn.onclick = function () {
+        audio.play();
+    }
+</script>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>我是内容1</p>
+<p>我是内容2</p>
+<p>我是内容3</p>
+<p>我是内容4</p>
+<p>我是内容5</p>
+<p>我是内容6</p>
+<p>我是内容7</p>
+<p>我是内容8</p>
+<p>我是内容9</p>
+<p>我是内容10</p>
+<p>我是内容11</p>
+<p>我是内容12</p>
+<p>我是内容13</p>
+<p>我是内容14</p>
+<p>我是内容15</p>
+<p>我是内容16</p>
+<p>我是内容17</p>
+<p>我是内容18</p>
+<p>我是内容19</p>
+<p>我是内容20</p>
+<p>我是内容21</p>
+<p>我是内容22</p>
+<p>我是内容23</p>
+<p>我是内容24</p>
+<p>我是内容25</p>
+<p>我是内容26</p>
+<p>我是内容27</p>
+<p>我是内容28</p>
+<p>我是内容29</p>
+<p>我是内容30</p>
+<p>我是内容31</p>
+<p>我是内容32</p>
+<p>我是内容33</p>
+<p>我是内容34</p>
+<p>我是内容35</p>
+<img src="./imgs/image.png" alt="" data-src="./imgs/fengzelina.jpg">
+<p>我是内容36</p>
+<p>我是内容37</p>
+<p>我是内容38</p>
+<p>我是内容39</p>
+<p>我是内容40</p>
+<p>我是内容41</p>
+<p>我是内容42</p>
+<p>我是内容43</p>
+<p>我是内容44</p>
+<p>我是内容45</p>
+<p>我是内容46</p>
+<p>我是内容47</p>
+<p>我是内容48</p>
+<p>我是内容49</p>
+<p>我是内容50</p>
+<p>我是内容51</p>
+<img src="imgs/image.png" alt="" data-src="./imgs/liuyifei.jpg">
+<p>我是内容52</p>
+<p>我是内容53</p>
+<p>我是内容54</p>
+<p>我是内容55</p>
+<p>我是内容56</p>
+<p>我是内容57</p>
+<p>我是内容58</p>
+<p>我是内容59</p>
+<p>我是内容60</p>
+<p>我是内容61</p>
+<p>我是内容62</p>
+<p>我是内容63</p>
+<p>我是内容64</p>
+<p>我是内容65</p>
+<p>我是内容66</p>
+<p>我是内容67</p>
+<p>我是内容68</p>
+<p>我是内容69</p>
+<p>我是内容70</p>
+<p>我是内容71</p>
+<p>我是内容72</p>
+<p>我是内容73</p>
+<p>我是内容74</p>
+<p>我是内容75</p>
+<p>我是内容76</p>
+<p>我是内容77</p>
+<p>我是内容78</p>
+<p>我是内容79</p>
+<p>我是内容80</p>
+<p>我是内容81</p>
+<p>我是内容82</p>
+<p>我是内容83</p>
+<p>我是内容84</p>
+<p>我是内容85</p>
+<p>我是内容86</p>
+<p>我是内容87</p>
+<p>我是内容88</p>
+<p>我是内容89</p>
+<p>我是内容90</p>
+<p>我是内容91</p>
+<p>我是内容92</p>
+<p>我是内容93</p>
+<p>我是内容94</p>
+<p>我是内容95</p>
+<p>我是内容96</p>
+<p>我是内容97</p>
+<p>我是内容98</p>
+<p>我是内容99</p>
+<p>我是内容100</p>
+</body>
+<script>
+    // 新属性dataset.src  任何有data-src 都可以用
+    var imgs = document.querySelectorAll('img');
+
+    window.onscroll = function () {
+        for (var i = 0; i < imgs.length; i++){
+            //innerheight	返回窗口的文档显示区的高度。
+            // innerwidth	返回窗口的文档显示区的宽度。
+
+            // 获取窗口的高度与宽度(不包含工具条与滚动条):
+            // var w=window.innerWidth;
+            // var h=window.innerHeight;
+
+            var pageHeight = window.innerHeight;
+            var scrollHeight = document.documentElement.scrollTop||
+                document.body.scrollTop;
+            if (imgs[i].offsetTop <= scrollHeight + pageHeight){
+                // imgs[i].src = imgs[i].getAttribute('data-src')
+                imgs[i].src = imgs[i].dataset.src
+
+
+            }
+
+        }
+    }
+
+
+
+
+
+
+
+</script>
+</html>

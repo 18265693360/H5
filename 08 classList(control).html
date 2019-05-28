@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background: #ffdf7e;
+        }
+        .active{
+            background: #409eff;
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+<button id="btn">切换</button>
+</body>
+<script>
+
+
+
+    // indexOf
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    var a = fruits.indexOf("Apple");
+    //  indexOf() 方法可返回数组中某个指定的元素位置。
+    //  该方法将从头到尾地检索数组，看它是否含有对应的元素。
+    //  开始检索的位置在数组 start 处或数组的开头
+    // （没有指定 start 参数时）。如果找到一个 item，
+    //  则返回 item 的第一次出现的位置。
+    //  开始位置的索引为 0。
+    //  如果在数组中没找到指定元素则返回 -1。
+
+
+
+    // var box = document.querySelector('这样少一个点 不对box');
+    var box = document.querySelector('.box');
+    var btn = document.getElementById('btn')
+
+    // btn.onclick = function () {
+    //     if (box.className.indexOf('active')!=-1){
+    //         box.className = "box"
+    //     }else{
+    //         box.className = 'box active'
+    //     }
+    // }
+
+    btn.onclick = function () {
+        // if (box.classList.contains('active')){
+        //     box.classList.remove('active')
+        // }else{
+        //     box.classList.add('active');
+        // }
+
+        //一句搞定
+        box.classList.toggle('active');
+
+    }
+</script>
+</html>

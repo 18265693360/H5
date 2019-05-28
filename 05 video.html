@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1205997_5h749ptvebt.css">
+    <style>
+        .myvideo{
+            width: 600px;
+            /*height: 400px;*/
+        }
+        .container {
+            position: relative;
+        }
+        .icon-bofang{
+            font-size: 60px;
+            position: absolute;
+            bottom: 10px;
+            color: #ff0000;
+            left: 10px;
+            cursor: pointer;
+            /*cursor：pointer意思是是计算机中把鼠标指针的形状弄成一只伸出食指的手，如下图*/
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <video class="myvideo" preload id="video">
+        <source src="0-1.mp4">
+        请升级你的浏览器
+    </video>
+    <i class="iconfont icon-bofang" id="play"></i>
+</div>
+<button id="btn">判断是否暂停</button>
+<button id="btn1">获得播放的时间点</button>
+<button id="btn2">返回视频总长</button>
+<button id="btn3">2倍播放</button>
+<button id="btn4">静音按钮</button>
+<button id="btn5">音量按钮</button>
+<button id="btn6">音量最小</button>
+<!--<button id="btn7">判断是否暂停</button>-->
+</body>
+<script>
+    var btn = document.getElementById('btn')
+    var btn1 = document.getElementById('btn1')
+    var btn2 = document.getElementById('btn2')
+    var btn3 = document.getElementById('btn3')
+    var btn4 = document.getElementById('btn4')
+    var btn5 = document.getElementById('btn5')
+    var play = document.getElementById('play')
+
+
+
+    // var btn = document.getElementById('btn')
+    btn.onclick = function () {
+        console.log(video.paused);
+    }
+    play.onclick = function () {
+        if (video.paused){
+            video.play();
+        } else {
+            video.paused
+        }
+    }
+
+    btn1.onclick = function () {
+        video.currentTime = 4;
+    }
+    btn2.onclick = function () {
+        console.log(video.duration);
+    }
+    btn3.onclick = function () {
+        video.playbackRate = 2;
+    }
+    btn4.onclick = function () {
+        video.muted = true
+    }
+    btn5.onclick = function () {
+        video.volume = 1;
+    }
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

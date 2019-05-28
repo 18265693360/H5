@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="https://www.baidu.com" id="myform">
+    <!--require 必选项   pattern="\d\d\d"正则以 333形式出现-->
+    用户名：<input type="text" required name="username"
+               placeholder="请输入您的用户名" pattern="\d\d\d">
+    <input type="file" multiple id="file">
+    <!--属于哪一个表单-->
+</form>
+<input type="text" name="sex" form="myform">
+<!--表单域之外新增的表单元素可以通过form 进行绑定-->
+</body>
+<script>
+    // autofocus
+    // require
+    // autocomplete 自动匹配信息开
+    // autoncomplete = "off" 自动匹配信息关闭
+    // pattern  正则 模式
+    // multiple 多个文件
+    // form
+
+    var file = document.getElementById('file')
+
+    file.onchange = function () {
+        console.log(this.files);//上传的文件在files
+        // console.log(this.value);//文件不在value中
+    }
+</script>
+</html>

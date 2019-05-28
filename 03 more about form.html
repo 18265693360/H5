@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--关键词联想-->
+<form action="https://www.taobao.com">
+    <fieldset>
+        <lenged>填写城市：</lenged>
+        <label for="">出发城市：</label>
+        <input type="text" list="cities">
+        <datalist id="cities">
+            <option value="北京"> 北京</option>
+            <option value="上海"> 上海</option>
+            <option value="广州"> 广州</option>
+            <option value="深圳"> 深圳</option>
+            <option value="上饶"> 上饶</option>
+        </datalist>
+    </fieldset>
+</form>
+
+用户名：<input type="text">
+<br>
+密码：<input type="password" autofocus>
+<!--自动对焦 safair 浏览器不支持-->
+<input type="password" id="pwd">
+</body>
+<script>
+    var pwd = document.getElementById('pwd')
+    pwd.focus();
+    //自动对焦 safair
+</script>
+</html>

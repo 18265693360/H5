@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="https://www.baidu.com">
+    邮箱：<input type="email" id="email">
+    <br>
+    <button>提交</button>
+</form>
+</body>
+<script>
+    var email = document.getElementById('email');
+
+    // oninput 事件 用户输入的时候就触发
+    // oninvaild 事件  表单元素验证不通过时，触发
+
+
+    email.oninput = function () {
+        console.log(this.value, 'input');
+    }//输入就触发
+
+
+
+    // oninput和onchange有什么区别？
+    // oninput在用户一输入时就触发，onchange是用户输入完后，并且在失去焦点时触发。
+    // oninput只能作用于input和textarea，onchange可以作用于input, textarea和select等。
+    // oninput的兼容性，没有onchange的兼容性好。
+
+
+    email.onchange = function () {
+        console.log(this.value, 'change');
+    }
+
+    email.oninvalid = function () {
+        console.log('验证不通过');
+    }
+
+</script>
+</html>
